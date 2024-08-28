@@ -107,3 +107,23 @@ var result = array2.myEvery(array2, function(x){
 }
 );
 console.log("người dùng đều trên 18 tuổi ? "+result);
+
+
+// map
+
+function myMap(array, callback) {
+    const resultArray = []; 
+  
+    for (let i = 0; i < array.length; i++) {
+  
+      resultArray.push(callback(array[i], i, array));
+    }
+  
+    return resultArray;
+  }
+
+
+  const mapped = myMap(array, x => x * 2);
+  
+  console.log(mapped); 
+  
