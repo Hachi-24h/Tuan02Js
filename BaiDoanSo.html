@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đoán Số Bí Mật!</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* style.css */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #222;
+  color: #eee;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.between {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.number {
+  font-size: 6rem;
+  width: 15rem;
+  height: 15rem;
+  background-color: #333;
+  color: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.left, .right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.guess {
+  font-size: 2rem;
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.check, .again {
+  font-size: 1.5rem;
+  padding: 10px 20px;
+  background-color: #60b347;
+  border: none;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.check:hover, .again:hover {
+  background-color: #45a049;
+}
+
+.message {
+  font-size: 2rem;
+  margin: 20px 0;
+}
+
+.label-score, .label-highscore {
+  font-size: 1.5rem;
+}
+
+.score, .highscore {
+  font-weight: bold;
+}
+
+.left, .right {
+  width: 300px;
+}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Đoán Số Bí Mật!</h1>
+    <p class="between">(Giữa 1 và 20)</p>
+    <button class="btn again">Chơi lại!</button>
+    <div class="number">?</div>
+  </header>
+  <main>
+    <section class="left">
+      <input type="number" class="guess">
+      <button class="btn check">Kiểm tra!</button>
+    </section>
+    <section class="right">
+      <p class="message">Bắt đầu đoán...</p>
+      <p class="label-score">💯 Điểm: <span class="score">20</span></p>
+      <p class="label-highscore">🥇 Kỷ lục: <span class="highscore">0</span></p>
+    </section>
+  </main>
+  <script src="21078341_PhanThanhNam_Tuan02.js"></script>
+</body>
+</html>
