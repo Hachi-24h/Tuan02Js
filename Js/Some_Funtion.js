@@ -45,3 +45,65 @@ Array.prototype.myReduce= function myReduce(array, callback, initialValue) {
     }, 0);
     console.log(result);
 
+
+
+
+
+// find 
+Array.prototype.myFind = function myFind(array, condition){
+    for(var i=0; i<array.length;i++){
+        if(condition(array[i])){
+            return array[i];
+        }
+    }
+    return undefined;
+}
+
+// test
+var result = array.myFind(array, function(x){
+    return x>5;
+});
+console.log(result);
+
+
+
+// some
+
+Array.prototype.mySome = function mySome(array, condition){
+    for(var i=0; i<array.length;i++){
+        if(condition(array[i])){
+            return true;
+        }
+    }
+    return false;
+}
+
+// test
+
+var array2=[ { name: 'John', age: 16 },
+    { name: 'Jane', age: 19 },
+    { name: 'Jack', age: 17 }]
+
+var result = array2.mySome(array2, function(x){
+    return x.age>18;
+});
+console.log("Có ít nhất 1 người dùng trên 19 tuổi ?"+result);
+
+
+// every
+
+Array.prototype.myEvery = function myEvery(array, condition){
+    for(var i=0; i<array.length;i++){
+        if(!condition(array[i])){
+            return false;
+        }
+    }
+    return true;
+}
+
+// test
+var result = array2.myEvery(array2, function(x){
+    return x.age>18;
+}
+);
+console.log("người dùng đều trên 18 tuổi ? "+result);
