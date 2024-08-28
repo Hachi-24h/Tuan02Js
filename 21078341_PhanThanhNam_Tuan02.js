@@ -53,3 +53,6 @@ againBtn.addEventListener('click', function () {
   body.style.backgroundColor = 'white'; // Đổi nền thành trắng khi bấm "Chơi lại"
   number.style.width = '15rem';
 });
+
+
+
